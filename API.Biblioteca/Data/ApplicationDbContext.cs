@@ -16,5 +16,11 @@ namespace API.Biblioteca.Data
         public DbSet<Genero> Generos { get; set; }
         public DbSet<Livro> Livros { get; set; }
         public DbSet<LivroGenero> LivrosGeneros { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Devolucao> Devolucoes { get; set; }
+        public DbSet<Emprestimo> Emprestimos { get; set; }
+
+        public DbSet<EmprestimoLivro> EmprestimosLivros { get; set; }
+        
     }
 }

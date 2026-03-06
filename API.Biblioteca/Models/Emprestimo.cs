@@ -1,0 +1,18 @@
+﻿namespace API.Biblioteca.Models
+{
+    public class Emprestimo
+    {
+        public Guid EmprestimoId { get; set; }
+       
+        public DateTime? DataEmprestimo { get; set; }
+        public DateTime? DataDevolucao { get; set; } = DateTime.Now.AddDays(10); // Definindo a data de devolução para 7 dias após o empréstimo
+
+        public bool Devolvido { get; set; } = false; // Campo para indicar se o livro foi devolvido, com valor padrão definido para false
+
+        // Chave estrangeira para Cliente
+        public Guid ClienteId { get; set; }
+        // Propriedade de navegação para Cliente
+        public Cliente? Cliente { get; set; }
+
+    }
+}
